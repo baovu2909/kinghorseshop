@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nạp tiền KingHorseShop</title>
+    <link rel="stylesheet" href="paycard.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!--Thanh menu-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><i class="fa-solid fa-house"></i> Trang chủ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="napTienDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Nạp tiền
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="napTienDropdown">
+                            <li><a class="dropdown-item" href="paycard.html">Nạp qua thẻ cào</a></li>
+                            <li><a class="dropdown-item" href="payatm.html">Nạp qua ATM / Ví điện tử</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="historypay.html">Lịch sử mua</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="roleshop.html">Quy định</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="checkacc.html">Kiểm tra tài khoản nạp</a>
+                    </li>
+                </ul>
+
+
+                <!-- Sign in/ Sign up -->
+                <form class="d-flex" id="menu-section">
+                    <button class="btn btn-info me-2" type="submit">Đăng ký</button>
+                    <button class="btn btn-info" type="submit">Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="rowone">
+
+    </div>
+
+    <!--Design bên trong-->
+  <div class="container my-4">
+        <h1 class="game-title text-center mb-4">Nạp tiền</h1>
+        <div class="d-flex justify-content-center">
+            <div class="card w-100" style="max-width: 1200px;">
+                <div class="card-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="cardType" class="form-label d-flex">Loại thẻ:</label>
+                            <select class="form-select" id="cardType">
+                                <option>Viettel</option>
+                                <option>Mobifone</option>
+                                <option>Vinaphone</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardType" class="form-label d-flex">Chọn mệnh giá:</label>
+                            <select class="form-select" id="cardType">
+                                <option>20.000đ</option>
+                                <option>50.000đ</option>
+                                <option>100.000đ</option>
+                                <option>200.000đ</option>
+                                <option>500.000đ</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cardCode" class="form-label d-flex">Mã thẻ</label>
+                            <input type="text" class="form-control" id="cardCode" placeholder="Nhập mã thẻ">
+                        </div>
+                        <div class="mb-3">
+                            <label for="serial" class="form-label d-flex">Số serial</label>
+                            <input type="text" class="form-control" id="serial" placeholder="Nhập số serial">
+                        </div>
+                        <button type="submit" class="btn btn-success">Nạp thẻ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+                <!-- Footer trang web -->
+                <footer>
+                    <div style="background: black; color: white;">
+                        <div class="container d-flex">
+                            <div style="margin: 25px 15px 0 0;">
+                                <img src="" alt="" style="width: 95px;">
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <h2>Về KingHorseShop.com</h2>
+                                <h1>Shop cung cấp những Acc Game Uy Tín - Chất Lượng - Ngon bổ rẻ</h1>
+                                <p>Chúng tôi luôn đặt quyền lợi của khách hàng lên trên hàng đầu và luôn hỗ trợ vui vẻ,
+                                    nhiệt tình
+                                    cho Quý khách có một trải nghiệm tốt nhất bên shop</p>
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <h2>Thông tin SHOP</h2>
+                                <p>Địa Chỉ: <span>493/130/21 - KP9, p.Tân Biên, tp. Biên Hoà, Đồng Nai</span></p>
+                                <p>Website: <span>www.kinghorseshop.com | Email: vubao0692@gmail.com</span></p>
+                                <p>Điện thoại: <span>0362488116</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: #020000; color: white;">
+                        <div class="container text-center py-3">
+                            Copyright © kinghorseshop.com. All rights reserved
+                        </div>
+                    </div>
+                </footer>
+
+</body>
+<script>
+    const menuSection = document.getElementById('menu-section');
+    const username = localStorage.getItem('username');
+
+    if (username) {
+        menuSection.innerHTML = `
+            <span class="me-3 my-2 text-white">${username}</span>
+            <button class="btn btn-danger" onclick="logout()">Đăng xuất</button>
+        `;
+    } else {
+        menuSection.innerHTML = `
+            <a class="btn btn-info me-2" href="register.html">Đăng ký</a>
+            <a class="btn btn-info" href="login.html">Đăng nhập</a>
+        `;
+    }
+
+    function logout() {
+        localStorage.removeItem('username');
+        localStorage.removeItem('btnDangNhap');
+        window.location.reload();
+    }
+</script>
+
+</html>

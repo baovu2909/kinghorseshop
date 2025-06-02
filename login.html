@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+     <style>
+        body {
+            background-color: #212529;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="card shadow rounded p-4 bg-dark text-white">
+            <div class="text-center mb-4">
+                <h2>Đăng nhập</h2>
+            </div>
+            <div>
+                    <div class="form-outline mb-4 px-5">
+                        <label class="form-label" for="username">Tài khoản</label>
+                        <input type="text" id="username" class="form-control" name="txtTK">
+
+                    </div>
+
+                    <div class="form-outline mb-4 px-5">
+                        <label class="form-label" for="password">Mật khẩu</label>
+                        <input type="text" id="password" class="form-control" name="txtMK">
+
+                    </div>
+                    <div class="container d-flex justify-content-center">
+                        <button name="btnDangNhap" class="btn btn-primary btn-block mb-4 mx-4" onclick="login()" >Đăng nhập</button>
+                        <button name="btnQuaylai" class="btn btn-secondary btn-block mb-4 mx-4" onclick="Back()">Quay lại</button>
+                    </div>
+
+</body>
+<script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'Admin' && password === '123') {
+                localStorage.setItem('username', 'Admin');
+                window.location.href = 'index.html';
+            }
+             else {
+                alert('Sai tài khoản hoặc mật khẩu');
+            }
+        }
+        function Back(){
+            window.history.back();
+        }
+    </script>
+</html>
